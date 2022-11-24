@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to my website</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.menu{
+		flex: 1;
+		justify-content: space-between;
+		align-items: center;
+		display: flex;
+		background: seagreen;
+	}
+	.menu ul li{
+		display: inline-block;
+		list-style: none;
+		padding: 10px;
+		margin: 5px;
+		background:yellowgreen;
+		border-radius:5px;
+
+	}
+	.menu ul li a{
+		text-decoration: none;
+		/*color:paleturquoise;*/
+		color:darkcyan;
+	}
+	span{
+		color:cyan;
+		animation:textcolor 10s infinite linear;
+	}
+	@keyframes textcolor{
+		0%{
+			color:cyan;
+		}
+		30%{
+			color:greenyellow;
+		}
+		60%{
+			color: black;
+		}
+		90%{
+			color: yellow;
+		}
+		100%{
+			color: floralwhite;
+		}
+	} 
+	.menu ul li:hover{
+		background:yellow;
+		transition: 0.5s;
+	}
+	
+	footer{
+		background: #333;
+		height: 200px;
+		width: 100%;
+	
+	}
+.main-content{
+	display: flex;
+	width: 100%;
+}
+.main-content .box{
+	flex-basis: 50%;
+	padding: 10px 10px;
+}
+	.imagediv{
+		width: 100px;
+		height: 100px;
+		border-radius: 5px;
+		border-color: red;
+		filter: brightness(140%);
+		margin-top: 10px;
+	}
+	p{
+		font-weight:bold;
+		font-size: 20px;
+	}
+	figcaption{
+		color: green;
+	}
+	.footer{
+		text-decoration: none;
+		color: red;
+	}
+.letter{
+	color: white;
+	text-align: justify;
+	width: 400px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+input{
+	width: 160px;
+	height: 25px;
+	background-color:greenyellow ;
+	outline-color: greenyellow;
+}
+.send{
+	width: 165px;
+	height: 25px;
+	background-color: red;
+	border-color: red;
+	color: white;
+}
+textarea{
+	width: 160px;
+	height: 25px;
+	background-color: greenyellow;
+	outline-color:greenyellow;
+}
+#explore{
+	background-color:red;
+	width: 80px;
+	height: 2px;
+	display: block;
+	margin-top: 5px;
+}
+.text{
+		margin-left: 20px;
+		color: #2c7f80;
+}
+.hero{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	align-self: center;
+	background-image:url(images/image_2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	align-items: center;
+	justify-content: center;
+}
+button{
+	width: 90px;
+	height: 40px;
+	color: white;
+	background-color: peru;
+	outline-color: red;
+	border-color: peru;
+	margin-top: 20px;
+	border-radius: 5px;
+
+}
+button:hover{
+	color: black;
+	background-color: yellow;
+	transition: 1s;
+}
+.footer-copyright{
+	background: #111;
+	color: white;
+}
+</style>
+<body>
+	<nav class="menu">
+		<h1>Teach<span>Code</span></h1>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="edit.html" target="_blank">Edit</a></li>
+			<li><a href="selection.html" target="_blank">Selection</a></li>
+			<li><a href="view.html" target="_blank">View</a></li>
+			<li><a href="tools.html" target="_blank">Tools</a></li>
+			<li><a href="project.html" target="_blank">Project</a></li>
+		</ul>
+	</nav>
+	<div class="hero">
+		<center><div class="div1">
+		<h1 style="color:white;">Welcome To My website</h1>
+		<p style="color:white;">Making Website is now one of the easiest thing in the world. You just need to learn<br>HTML, CSS,
+Javasript and you are good to go.</p>
+		<button type="button">More</button>
+		<button type="button">Learn</button>
+</center>
+</div>
+	</div>
+	<!--footer content-->
+	<footer>
+		<div class="main-content">
+	<div class="left box">
+		<h2 class="text">ABOUT US<span id="explore"></span></h2>
+		<p class="letter">
+		This is Simple website. In this site available for about the plan of website. Which is not real website but always useful. I am IT Student. I studying in Diploma Information Technology. 
+		</p>
+	</div>
+	<div class="center box">
+		<h2 class="text">ADDRESS<span id="explore"></span></h2>
+		<p style="margin-top:10px; color: white;"><i class='fas fa-map-marker-alt'></i>Address:Sindhupalchok,Bahrabise-1</p>
+		<p style="color: white;">&#9742;Phone No:9860243277</p>
+		<p style="color: white;">Email:-<a href="#" style="color:white;">rupeshmagar1365@gmail.com</a></p>
+
+	</div>
+	<div class="right box">
+	<h2 class="text">CONTACT US<span id="explore"></span></h2>
+	<!--HTMl form-->
+	 <form action="https://codeliber.com/form-action.php" onsubmit="return validateForm()" style="margin-top: 10px;">
+		<label>Email*</label><br>
+		<input type="email" name="email" id="email" title="Enter Your Email Id"><br>
+		<label>Message*</label><br>
+		<textarea title="Text your message"></textarea><br>
+		 <!-- <input type="text" name="" pattern="[A-Z]" title="Text your message"><br>-->
+		<input type="submit" value="Send" name="" class="send">
+	</form>
+<!--End-->
+	</div>
+</div>
+	</footer>
+<!--End footer content-->
+
+	<div class="footer-copyright">
+	<center><p>Created By<a href="#" class="footer">RTM</a>&copy;
+	|2020 All rights reserved.</p></center>
+	</div>
+<!--Using Java form-->
+	<script>
+		function validateForm() {
+			var email= document.getElementsById('email').value;
+			if (email=="") {
+				alert("Please enter a email id.");
+				return false;
+			}
+			// body...
+		}
+	</script>
+	<!--End-->
+</body>
+</html>
